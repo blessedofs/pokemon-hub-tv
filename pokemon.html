@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokémon | Pokémon Hub</title>
+  <meta name="description" content="Pokémon profile and anime appearances.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-ball" aria-hidden="true"></span>
+      <span>Pokémon Hub</span>
+    </a>
+    <a class="home-link" href="index.html">Search another Pokémon</a>
+  </header>
+
+  <main class="profile-shell">
+    <div id="loadingState" class="status-card">Loading Pokémon…</div>
+    <div id="errorState" class="status-card hidden">
+      <h1>Pokémon not found</h1>
+      <p>Try searching from the home page.</p>
+      <a class="primary-button" href="index.html">Back home</a>
+    </div>
+
+    <article id="profile" class="hidden">
+      <section class="pokemon-hero">
+        <div class="pokemon-art-wrap">
+          <div class="type-orb"></div>
+          <img id="pokemonArt" class="pokemon-art" alt="">
+        </div>
+
+        <div class="pokemon-intro">
+          <p id="generation" class="eyebrow"></p>
+          <div class="title-row">
+            <h1 id="pokemonName"></h1>
+            <span id="dexNumber" class="dex-number"></span>
+          </div>
+
+          <div id="types" class="type-row"></div>
+          <p id="description" class="pokemon-description"></p>
+
+          <div class="facts-grid">
+            <div class="fact">
+              <span>Height</span>
+              <strong id="height"></strong>
+            </div>
+            <div class="fact">
+              <span>Weight</span>
+              <strong id="weight"></strong>
+            </div>
+            <div class="fact">
+              <span>Abilities</span>
+              <strong id="abilities"></strong>
+            </div>
+            <div class="fact">
+              <span>Region</span>
+              <strong id="region"></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Family</p>
+            <h2>Evolution Line</h2>
+          </div>
+        </div>
+        <div id="evolutionLine" class="evolution-line"></div>
+      </section>
+
+      <section class="section-card anime-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Watch Guide</p>
+            <h2>Anime Appearances</h2>
+          </div>
+          <span id="appearanceCount" class="count-pill"></span>
+        </div>
+
+        <div id="appearanceList" class="appearance-grid"></div>
+
+        <div id="noAppearances" class="empty-state hidden">
+          <div class="empty-icon">📺</div>
+          <h3>Anime links coming soon</h3>
+          <p>
+            This Pokémon page is live. Its appearance list just hasn't been added
+            to our anime database yet.
+          </p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script src="js/pokemon.js"></script>
+</body>
+</html>
