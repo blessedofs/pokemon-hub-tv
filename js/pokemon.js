@@ -149,11 +149,14 @@ async function renderAppearances(pokemonName) {
         : "Anime appearance";
 
       card.innerHTML = `
-        <div class="episode-poster" aria-hidden="true">
-          <div>
-            <div class="tv">📺</div>
-            <small>${episode.series || "Pokémon Anime"}</small>
-          </div>
+        <div class="episode-poster ${episode.thumbnail ? "has-thumbnail" : ""}" aria-hidden="true">
+          ${episode.thumbnail
+            ? `<img class="episode-thumbnail" src="${episode.thumbnail}" alt="" loading="lazy">`
+            : `<div>
+                 <div class="tv">📺</div>
+                 <small>${episode.series || "Pokémon Anime"}</small>
+               </div>`
+          }
         </div>
         <div class="episode-body">
           <div class="episode-meta">${episode.series || "Pokémon Anime"} · ${episodeLabel}</div>
@@ -290,4 +293,3 @@ async function init() {
 }
 
 init();
-
