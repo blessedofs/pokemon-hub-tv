@@ -651,3 +651,44 @@ h1, h2, h3, p { margin-top: 0; }
 .show-more-button:hover {
   background: rgba(255,255,255,.10);
 }
+
+/* Anime quality upgrade */
+.anime-subsection {
+  margin-top: 28px;
+}
+
+.anime-subheading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.anime-subheading h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: -.02em;
+}
+
+.first-appearance-card {
+  margin-bottom: 28px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255,216,77,.08), rgba(255,255,255,.02));
+}
+
+.first-appearance-card > div:first-child {
+  margin-bottom: 14px;
+}
+
+.first-appearance-card h3 {
+  margin-bottom: 6px;
+  font-size: 1.35rem;
+}
+
+.first-appearance-card p:last-child {
+  color: var(--muted);
+  margin-bottom: 0;
+}
