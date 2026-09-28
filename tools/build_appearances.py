@@ -174,6 +174,36 @@ def match_pokeflix(title: str, video_map: dict[str, str]) -> str | None:
 
     return None
 
+
+def classify_appearance(code: str, title: str) -> str:
+    """
+    Heuristic appearance category:
+    - movie/special: movie/special/OVA-style codes or titles
+    - cameo: titles explicitly marked cameo/brief/flashback
+    - featured: everything else
+    """
+    code_upper = code.upper()
+
+    if (
+        code_upper.startswith(("M", "S", "P", "OVA", "PLA"))
+        or "movie" in title.lower()
+        or "special" in title.lower()
+    ):
+        return "movie-special"
+
+    cameo_words = (
+        "cameo",
+        "brief appearance",
+        "flashback",
+        "montage",
+        "photo",
+    )
+    low = title.lower()
+    if any(word in low for word in cameo_words):
+        return "cameo"
+
+    return "featured"
+
 def build(max_dex: int, start: int = 1) -> dict[str, list[dict]]:
     species = get_species_names(max_dex)
     print(f"PokéAPI species loaded: {len(species)}")
@@ -215,6 +245,7 @@ def build(max_dex: int, start: int = 1) -> dict[str, list[dict]]:
                 "episode": code,
                 "title": title,
                 "sourceUrl": url,
+                "category": classify_appearance(code, title),
             }
             if direct:
                 item["watchUrl"] = direct
@@ -297,3 +328,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
