@@ -94,10 +94,19 @@ async function renderEvolution(species) {
 
 async function renderAppearances(pokemonName) {
   try {
-    const response = await fetch("data/appearances.json");
+    const response = await fetch(
+      `data/appearances/${encodeURIComponent(pokemonName)}.json`
+    );
+
+    if (response.status === 404) {
+      $("appearanceCount").textContent = "0 added";
+      $("noAppearances").classList.remove("hidden");
+      return;
+    }
+
     if (!response.ok) throw new Error();
-    const database = await response.json();
-    const appearances = database[pokemonName] || [];
+
+    const appearances = await response.json();
 
     if (!appearances.length) {
       $("appearanceCount").textContent = "0 added";
@@ -214,3 +223,4 @@ async function init() {
 }
 
 init();
+
