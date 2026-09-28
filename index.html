@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokémon Hub</title>
+  <meta name="description" content="Browse every Pokémon and jump straight to its anime appearances.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Pokémon Hub home">
+      <span class="brand-ball" aria-hidden="true"></span>
+      <span>Pokémon Hub</span>
+    </a>
+  </header>
+
+  <main class="home-shell">
+    <section class="hero-card compact-hero">
+      <div>
+        <p class="eyebrow">Pokémon + Anime</p>
+        <h1>Every Pokémon.<br>One anime hub.</h1>
+        <p class="hero-copy">
+          Search the full Pokédex, open any Pokémon, then jump into its anime appearances and watch links.
+        </p>
+
+        <form id="pokemonSearch" class="search-box">
+          <input id="pokemonInput" autocomplete="off" placeholder="Search by name or Pokédex number..." aria-label="Pokémon name or number">
+          <button type="submit">Find Pokémon</button>
+        </form>
+        <p id="searchError" class="error-text" role="alert"></p>
+      </div>
+
+      <a class="featured" href="pokemon.html?name=hitmonchan">
+        <div class="featured-glow"></div>
+        <img
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/107.png"
+          alt="Hitmonchan">
+        <div class="featured-caption">
+          <strong>Featured</strong>
+          <span>Hitmonchan #107</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="all-pokemon-section">
+      <div class="section-heading home-heading">
+        <div>
+          <p class="eyebrow">National Pokédex</p>
+          <h2>Browse All Pokémon</h2>
+        </div>
+        <span id="pokemonCount" class="count-pill">Loading…</span>
+      </div>
+
+      <div class="dex-controls">
+        <input id="dexFilter" type="search" placeholder="Filter Pokémon..." aria-label="Filter Pokémon">
+        <select id="generationFilter" aria-label="Filter by generation">
+          <option value="all">All generations</option>
+          <option value="1">Generation I</option>
+          <option value="2">Generation II</option>
+          <option value="3">Generation III</option>
+          <option value="4">Generation IV</option>
+          <option value="5">Generation V</option>
+          <option value="6">Generation VI</option>
+          <option value="7">Generation VII</option>
+          <option value="8">Generation VIII</option>
+          <option value="9">Generation IX</option>
+        </select>
+      </div>
+
+      <div id="pokemonGrid" class="pokemon-grid">
+        <div class="status-card">Loading the Pokédex…</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const generationRanges = {
+      1: [1, 151],
+      2: [152, 251],
+      3: [252, 386],
+      4: [387, 493],
+      5: [494, 649],
+      6: [650, 721],
+      7: [722, 809],
+      8: [810, 905],
+      9: [906, 2000]
+    };
+
+    let allPokemon = [];
+
+    const titleCase = (value) =>
+      value.split("-").map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(" ");
+
+    const getIdFromUrl = (url) => {
+      const match = url.match(/\/pokemon\/(\d+)\//);
+      return match ? Number(match[1]) : null;
+    };
+
+    function renderGrid() {
+      const query = document.getElementById("dexFilter").value.trim().toLowerCase();
+      const generation = document.getElementById("generationFilter").value;
+
+      let filtered = allPokemon.filter(p =>
+        p.name.includes(query) || String(p.id).includes(query)
+      );
+
+      if (generation !== "all") {
+        const [min, max] = generationRanges[generation];
+        filtered = filtered.filter(p => p.id >= min && p.id <= max);
+      }
+
+      const grid = document.getElementById("pokemonGrid");
+      document.getElementById("pokemonCount").textContent =
+        `${filtered.length} Pokémon`;
+
+      if (!filtered.length) {
+        grid.innerHTML = `<div class="status-card">No Pokémon matched that search.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <a class="pokemon-card" href="pokemon.html?name=${encodeURIComponent(p.name)}">
+          <div class="pokemon-card-number">#${String(p.id).padStart(4, "0")}</div>
+          <img
+            loading="lazy"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.id}.png"
+            alt="${titleCase(p.name)}">
+          <strong>${titleCase(p.name)}</strong>
+          <span>View anime appearances →</span>
+        </a>
+      `).join("");
+    }
+
+    async function loadPokemon() {
+      try {
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=2000&offset=0");
+        if (!response.ok) throw new Error();
+        const data = await response.json();
+
+        // Keep numbered National Pokédex entries and skip alternate-form records.
+        allPokemon = data.results
+          .map(p => ({ name: p.name, id: getIdFromUrl(p.url) }))
+          .filter(p => p.id && p.id <= 1025);
+
+        renderGrid();
+      } catch {
+        document.getElementById("pokemonGrid").innerHTML =
+          `<div class="status-card">The Pokédex couldn't load. Refresh the page and try again.</div>`;
+        document.getElementById("pokemonCount").textContent = "Unavailable";
+      }
+    }
+
+    document.getElementById("pokemonSearch").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const raw = document.getElementById("pokemonInput").value.trim().toLowerCase();
+      const error = document.getElementById("searchError");
+      error.textContent = "";
+      if (!raw) return;
+
+      const value = raw.replace(/\s+/g, "-");
+      try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${encodeURIComponent(value)}`);
+        if (!response.ok) throw new Error();
+        const data = await response.json();
+        window.location.href = `pokemon.html?name=${encodeURIComponent(data.name)}`;
+      } catch {
+        error.textContent = "I couldn't find that Pokémon. Try a name or Pokédex number.";
+      }
+    });
+
+    document.getElementById("dexFilter").addEventListener("input", renderGrid);
+    document.getElementById("generationFilter").addEventListener("change", renderGrid);
+
+    loadPokemon();
+  </script>
+</body>
+</html>
