@@ -787,3 +787,64 @@ h1, h2, h3, p { margin-top: 0; }
     min-height: 190px;
   }
 }
+
+/* Fix anime sections being split side-by-side on desktop */
+#appearanceList.appearance-grid {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+#appearanceList > .first-appearance-card,
+#appearanceList > .anime-subsection {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+#appearanceList > .anime-subsection {
+  margin-top: 30px;
+}
+
+/* Inside each anime section, keep episode cards full width */
+#appearanceList .anime-subsection .appearance-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 18px !important;
+  width: 100% !important;
+}
+
+#appearanceList .episode-card {
+  display: grid !important;
+  grid-template-columns: 220px minmax(0, 1fr) !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+}
+
+#appearanceList .episode-body {
+  min-width: 0 !important;
+}
+
+#appearanceList .episode-poster {
+  min-width: 0 !important;
+}
+
+#appearanceList .first-appearance-card .episode-card {
+  grid-template-columns: 220px minmax(0, 1fr) !important;
+}
+
+@media (max-width: 900px) {
+  #appearanceList .episode-card,
+  #appearanceList .first-appearance-card .episode-card {
+    grid-template-columns: 160px minmax(0, 1fr) !important;
+  }
+}
+
+@media (max-width: 650px) {
+  #appearanceList .episode-card,
+  #appearanceList .first-appearance-card .episode-card {
+    grid-template-columns: 1fr !important;
+  }
+}
