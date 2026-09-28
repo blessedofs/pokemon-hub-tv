@@ -288,11 +288,64 @@ def extract_episode_rows(html: str) -> list[tuple[str, str]]:
     return found
 
 
-def load_pokeflix_aliases(path: Path) -> dict[str, str]:
+def scrape_pokeflix_video_thumbnail(url: str) -> str | None:
     """
-    Load manual title -> direct Pokéflix URL overrides.
-    This is the last-resort fallback for titles that cannot be matched
-    automatically because the two sites use substantially different names.
+    Fetch a direct Pokéflix video page and try several reliable places for its poster/thumbnail.
+    This is mainly used for manual aliases, so manually-added links can still get artwork.
+    """
+    try:
+        html = fetch(url, delay=0.08)
+    except Exception as exc:
+        print(f"[Alias thumbnail] could not fetch {url}: {exc}")
+        return None
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Prefer social/share metadata because it is usually the canonical episode image.
+    for attr_name, attr_value in (
+        ("property", "og:image"),
+        ("name", "twitter:image"),
+        ("property", "twitter:image"),
+    ):
+        meta = soup.find("meta", attrs={attr_name: attr_value})
+        if meta and meta.get("content"):
+            src = meta["content"].strip()
+            if src and not src.startswith("data:"):
+                return urljoin(POKEFLIX_BASE, src)
+
+    # Video poster is another strong candidate.
+    video = soup.find("video")
+    if video and video.get("poster"):
+        return urljoin(POKEFLIX_BASE, video["poster"])
+
+    # Fallback to a likely episode/poster image.
+    for img in soup.find_all("img"):
+        src = img.get("data-src") or img.get("data-lazy-src") or img.get("src")
+        if not src or src.startswith("data:"):
+            continue
+
+        classes = " ".join(img.get("class", []))
+        alt = (img.get("alt") or "").lower()
+        if any(word in classes.lower() or word in alt for word in ("thumb", "episode", "video", "poster")):
+            return urljoin(POKEFLIX_BASE, src)
+
+    return None
+
+
+def load_pokeflix_aliases(path: Path) -> dict[str, dict]:
+    """
+    Load manual Pokéflix aliases.
+
+    Supported JSON formats:
+      "Title": "https://www.pokeflix.tv/v/..."
+    or
+      "Title": {
+        "url": "https://www.pokeflix.tv/v/...",
+        "thumbnail": "https://..."
+      }
+
+    For URL-only entries, the builder automatically visits the direct Pokéflix
+    page once and tries to discover its thumbnail.
     """
     if not path.exists():
         return {}
@@ -303,21 +356,51 @@ def load_pokeflix_aliases(path: Path) -> dict[str, str]:
         print(f"[Aliases] could not read {path}: {exc}")
         return {}
 
-    aliases: dict[str, str] = {}
-    for title, url in raw.items():
-        if not isinstance(title, str) or not isinstance(url, str):
-            continue
-        key = normalize_title(title)
-        if key and "/v/" in url:
-            aliases[key] = url.rstrip("/")
+    aliases: dict[str, dict] = {}
+    thumbnail_cache: dict[str, str | None] = {}
 
+    for title, value in raw.items():
+        if not isinstance(title, str):
+            continue
+
+        url = None
+        thumbnail = None
+
+        if isinstance(value, str):
+            url = value
+        elif isinstance(value, dict):
+            url = value.get("url")
+            thumbnail = value.get("thumbnail")
+
+        if not isinstance(url, str) or "/v/" not in url:
+            continue
+
+        url = url.rstrip("/")
+        key = normalize_title(title)
+        if not key:
+            continue
+
+        if not thumbnail:
+            if url not in thumbnail_cache:
+                thumbnail_cache[url] = scrape_pokeflix_video_thumbnail(url)
+            thumbnail = thumbnail_cache[url]
+
+        record = {"url": url}
+        if thumbnail:
+            record["thumbnail"] = thumbnail
+
+        aliases[key] = record
+
+    thumb_count = sum(1 for item in aliases.values() if item.get("thumbnail"))
     print(f"Manual Pokéflix aliases loaded: {len(aliases)}")
+    print(f"Manual alias thumbnails found: {thumb_count}")
     return aliases
+
 
 def match_pokeflix(
     title: str,
     video_map: dict[str, dict],
-    aliases: dict[str, str],
+    aliases: dict[str, dict],
 ) -> dict | None:
     candidates = {title}
 
@@ -339,7 +422,7 @@ def match_pokeflix(
     for candidate in expanded:
         key = normalize_title(candidate)
         if key in aliases:
-            return {"url": aliases[key]}
+            return aliases[key]
 
     # 2) Automatic Pokéflix title/slug aliases.
     for candidate in expanded:
