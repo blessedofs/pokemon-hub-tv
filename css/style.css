@@ -714,3 +714,76 @@ h1, h2, h3, p { margin-top: 0; }
     min-height: 190px;
   }
 }
+
+/* Strong desktop anime layout fix */
+#appearanceList,
+.anime-subsection,
+.first-appearance-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.appearance-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 18px !important;
+  width: 100% !important;
+}
+
+.episode-card {
+  display: grid !important;
+  grid-template-columns: 220px minmax(0, 1fr) !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  align-items: stretch;
+}
+
+.episode-poster {
+  width: 100%;
+  min-width: 0;
+}
+
+.episode-poster.has-thumbnail,
+.episode-thumbnail {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 180px;
+  object-fit: cover;
+}
+
+.episode-body {
+  width: 100%;
+  min-width: 0;
+}
+
+.episode-body h3,
+.episode-body p,
+.episode-meta {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.first-appearance-card .episode-card {
+  grid-template-columns: 220px minmax(0, 1fr) !important;
+}
+
+@media (max-width: 900px) {
+  .episode-card,
+  .first-appearance-card .episode-card {
+    grid-template-columns: 160px minmax(0, 1fr) !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .episode-card,
+  .first-appearance-card .episode-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .episode-poster.has-thumbnail,
+  .episode-thumbnail {
+    min-height: 190px;
+  }
+}
