@@ -251,6 +251,27 @@ def build(max_dex: int, start: int = 1) -> dict[str, list[dict]]:
     print(f"Direct Pokéflix links: {direct_matches}")
     return out
 
+
+def write_split_files(data: dict[str, list[dict]], base_dir: Path) -> None:
+    """
+    Write one small JSON file per Pokémon so the website only downloads
+    the selected Pokémon's anime appearances.
+    """
+    base_dir.mkdir(parents=True, exist_ok=True)
+
+    # Remove old generated JSON files so stale Pokémon data cannot linger.
+    for old_file in base_dir.glob("*.json"):
+        old_file.unlink()
+
+    for species_key, appearances in data.items():
+        out_file = base_dir / f"{species_key}.json"
+        out_file.write_text(
+            json.dumps(appearances, ensure_ascii=False, separators=(",", ":")),
+            encoding="utf-8",
+        )
+
+    print(f"Wrote {len(data)} split Pokémon appearance files to {base_dir}")
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-dex", type=int, default=1025)
@@ -261,11 +282,18 @@ def main():
     data = build(args.max_dex, args.start)
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Keep the master database as a backup/reference file.
     out_path.write_text(
         json.dumps(data, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    print(f"Wrote {out_path}")
+    print(f"Wrote master database: {out_path}")
+
+    # Website-optimized files: one small JSON file per Pokémon.
+    split_dir = out_path.parent / "appearances"
+    write_split_files(data, split_dir)
+
 
 if __name__ == "__main__":
     main()
