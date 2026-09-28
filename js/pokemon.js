@@ -172,7 +172,9 @@ async function renderAppearances(pokemonName) {
         <div class="episode-body">
           <div class="episode-meta">${episode.series || "Pokémon Anime"} · ${episodeLabel}</div>
           <h3>${episode.title}</h3>
-          <p>${episode.note || "Featuring this Pokémon in the anime."}</p>
+          ${episode.description
+            ? `<p>${episode.description}</p>`
+            : ""}
           <a class="watch-button"
              href="${targetUrl}"
              target="_blank"
