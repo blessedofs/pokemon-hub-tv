@@ -120,57 +120,124 @@ async function renderAppearances(pokemonName) {
     const list = $("appearanceList");
     list.innerHTML = "";
 
-    const batchSize = 10;
-    let visibleCount = 0;
+    const firstAppearance = appearances[0];
+    const featured = appearances.filter(
+      (episode) => (episode.category || "featured") === "featured"
+    );
+    const cameos = appearances.filter(
+      (episode) => episode.category === "cameo"
+    );
+    const movies = appearances.filter(
+      (episode) => episode.category === "movie-special"
+    );
 
-    const renderBatch = () => {
-      const nextBatch = appearances.slice(visibleCount, visibleCount + batchSize);
+    const createEpisodeCard = (episode) => {
+      const card = document.createElement("article");
+      card.className = "episode-card";
 
-      nextBatch.forEach((episode) => {
-        const card = document.createElement("article");
-        card.className = "episode-card";
+      const targetUrl =
+        episode.watchUrl ||
+        episode.searchUrl ||
+        "https://www.pokeflix.tv/search/";
 
-        const targetUrl = episode.watchUrl || episode.searchUrl || "https://www.pokeflix.tv/search/";
-        const buttonText = episode.watchUrl ? "Watch on Pokéflix ↗" : "Find on Pokéflix ↗";
-        const episodeLabel = episode.episode ? `Episode ${episode.episode}` : "Anime appearance";
+      const buttonText = episode.watchUrl
+        ? "Watch on Pokéflix ↗"
+        : "Find on Pokéflix ↗";
 
-        card.innerHTML = `
-          <div class="episode-poster" aria-hidden="true">
-            <div>
-              <div class="tv">📺</div>
-              <small>${episode.series || "Pokémon Anime"}</small>
-            </div>
+      const episodeLabel = episode.episode
+        ? `Episode ${episode.episode}`
+        : "Anime appearance";
+
+      card.innerHTML = `
+        <div class="episode-poster" aria-hidden="true">
+          <div>
+            <div class="tv">📺</div>
+            <small>${episode.series || "Pokémon Anime"}</small>
           </div>
-          <div class="episode-body">
-            <div class="episode-meta">${episode.series || "Pokémon Anime"} · ${episodeLabel}</div>
-            <h3>${episode.title}</h3>
-            <p>${episode.note || "Featuring this Pokémon in the anime."}</p>
-            <a class="watch-button"
-               href="${targetUrl}"
-               target="_blank"
-               rel="noopener noreferrer">${buttonText}</a>
-          </div>
-        `;
-        list.append(card);
-      });
+        </div>
+        <div class="episode-body">
+          <div class="episode-meta">${episode.series || "Pokémon Anime"} · ${episodeLabel}</div>
+          <h3>${episode.title}</h3>
+          <p>${episode.note || "Featuring this Pokémon in the anime."}</p>
+          <a class="watch-button"
+             href="${targetUrl}"
+             target="_blank"
+             rel="noopener noreferrer">${buttonText}</a>
+        </div>
+      `;
 
-      visibleCount += nextBatch.length;
-
-      let moreButton = document.getElementById("showMoreAppearances");
-      if (moreButton) moreButton.remove();
-
-      if (visibleCount < appearances.length) {
-        moreButton = document.createElement("button");
-        moreButton.id = "showMoreAppearances";
-        moreButton.className = "show-more-button";
-        moreButton.type = "button";
-        moreButton.textContent = `Show 10 more (${appearances.length - visibleCount} remaining)`;
-        moreButton.addEventListener("click", renderBatch);
-        list.insertAdjacentElement("afterend", moreButton);
-      }
+      return card;
     };
 
-    renderBatch();
+    const createSection = (title, items, options = {}) => {
+      if (!items.length) return;
+
+      const section = document.createElement("section");
+      section.className = "anime-subsection";
+
+      const heading = document.createElement("div");
+      heading.className = "anime-subheading";
+
+      const titleEl = document.createElement("h3");
+      titleEl.textContent = title;
+
+      const count = document.createElement("span");
+      count.className = "count-pill";
+      count.textContent = `${items.length}`;
+
+      heading.append(titleEl, count);
+      section.append(heading);
+
+      const grid = document.createElement("div");
+      grid.className = "appearance-grid";
+      section.append(grid);
+
+      const batchSize = options.batchSize || 10;
+      let visibleCount = 0;
+
+      const renderBatch = () => {
+        const next = items.slice(visibleCount, visibleCount + batchSize);
+
+        next.forEach((episode) => {
+          grid.append(createEpisodeCard(episode));
+        });
+
+        visibleCount += next.length;
+
+        const oldButton = section.querySelector(".show-more-button");
+        if (oldButton) oldButton.remove();
+
+        if (visibleCount < items.length) {
+          const button = document.createElement("button");
+          button.className = "show-more-button";
+          button.type = "button";
+          button.textContent =
+            `Show 10 more (${items.length - visibleCount} remaining)`;
+          button.addEventListener("click", renderBatch);
+          section.append(button);
+        }
+      };
+
+      renderBatch();
+      list.append(section);
+    };
+
+    const firstWrap = document.createElement("section");
+    firstWrap.className = "first-appearance-card";
+    firstWrap.innerHTML = `
+      <div>
+        <p class="eyebrow">First Anime Appearance</p>
+        <h3>${firstAppearance.title}</h3>
+        <p>${firstAppearance.series || "Pokémon Anime"} · Episode ${firstAppearance.episode || "—"}</p>
+      </div>
+    `;
+    firstWrap.append(createEpisodeCard(firstAppearance));
+    list.append(firstWrap);
+
+    createSection("Featured / Major Appearances", featured);
+    createSection("Cameo Appearances", cameos);
+    createSection("Movies & Specials", movies, { batchSize: 6 });
+
   } catch {
     $("appearanceCount").textContent = "Unavailable";
     $("noAppearances").classList.remove("hidden");
