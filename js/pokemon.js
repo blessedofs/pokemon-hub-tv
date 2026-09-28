@@ -119,6 +119,10 @@ async function renderAppearances(pokemonName) {
 
     const list = $("appearanceList");
     list.innerHTML = "";
+    // Force the outer anime container to stack sections vertically on desktop.
+    list.style.display = "block";
+    list.style.width = "100%";
+    list.style.maxWidth = "100%";
 
     const firstAppearance = appearances[0];
     const featured = appearances.filter(
@@ -134,6 +138,13 @@ async function renderAppearances(pokemonName) {
     const createEpisodeCard = (episode) => {
       const card = document.createElement("article");
       card.className = "episode-card";
+      card.style.display = "grid";
+      card.style.gridTemplateColumns = window.innerWidth <= 650
+        ? "1fr"
+        : "220px minmax(0, 1fr)";
+      card.style.width = "100%";
+      card.style.maxWidth = "none";
+      card.style.minWidth = "0";
 
       const targetUrl =
         episode.watchUrl ||
@@ -177,6 +188,10 @@ async function renderAppearances(pokemonName) {
 
       const section = document.createElement("section");
       section.className = "anime-subsection";
+      section.style.display = "block";
+      section.style.width = "100%";
+      section.style.maxWidth = "100%";
+      section.style.marginTop = "30px";
 
       const heading = document.createElement("div");
       heading.className = "anime-subheading";
@@ -193,6 +208,10 @@ async function renderAppearances(pokemonName) {
 
       const grid = document.createElement("div");
       grid.className = "appearance-grid";
+      grid.style.display = "grid";
+      grid.style.gridTemplateColumns = "minmax(0, 1fr)";
+      grid.style.gap = "18px";
+      grid.style.width = "100%";
       section.append(grid);
 
       const batchSize = options.batchSize || 10;
@@ -227,6 +246,9 @@ async function renderAppearances(pokemonName) {
 
     const firstWrap = document.createElement("section");
     firstWrap.className = "first-appearance-card";
+    firstWrap.style.display = "block";
+    firstWrap.style.width = "100%";
+    firstWrap.style.maxWidth = "100%";
     firstWrap.innerHTML = `
       <div>
         <p class="eyebrow">First Anime Appearance</p>
@@ -293,3 +315,4 @@ async function init() {
 }
 
 init();
+
