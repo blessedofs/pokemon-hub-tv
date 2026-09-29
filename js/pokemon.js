@@ -46,52 +46,66 @@ async function getPokemonWithFallback(name) {
   const normalized = String(name || "")
     .trim()
     .toLowerCase()
-    .replace(/[♀]/g, "-f")
-    .replace(/[♂]/g, "-m")
+    .replace(/[♀]/g, "-female")
+    .replace(/[♂]/g, "-male")
     .replace(/\s+/g, "-")
     .replace(/[()]/g, "")
     .replace(/--+/g, "-");
 
-  const candidates = [
-    normalized,
-    `${normalized}-male`,
-    `${normalized}-female`
-  ];
-
-  // Known species whose default Pokémon resource uses a gender suffix.
-  const defaultGenderAliases = {
-    meowstic: "meowstic-male",
-    indeedee: "indeedee-male",
-    oinkologne: "oinkologne-male",
-    basculegion: "basculegion-male"
+  const aliases = {
+    "giratina": "giratina-altered",
+    "giratina-altered-forme": "giratina-altered",
+    "altered-giratina": "giratina-altered",
+    "giratina-origin-forme": "giratina-origin",
+    "origin-giratina": "giratina-origin"
   };
 
-  if (defaultGenderAliases[normalized]) {
-    candidates.unshift(defaultGenderAliases[normalized]);
-  }
+  const firstCandidate = aliases[normalized] || normalized;
 
-  // Friendly aliases if a URL or data source spells the gender out.
-  if (normalized.endsWith("-male")) {
-    candidates.push(normalized.replace(/-male$/, ""));
-  }
+  try {
+    return await getJson(`${API}/pokemon/${encodeURIComponent(firstCandidate)}`);
+  } catch (directError) {
+    const speciesCandidates = [
+      normalized,
+      normalized.replace(/-(male|female)$/, ""),
+      normalized.replace(/-(altered|origin)(-forme)?$/, ""),
+      normalized.replace(/-forme$/, "")
+    ];
 
-  if (normalized.endsWith("-female")) {
-    candidates.push(normalized.replace(/-female$/, ""));
-  }
+    for (const speciesName of [...new Set(speciesCandidates.filter(Boolean))]) {
+      try {
+        const species = await getJson(
+          `${API}/pokemon-species/${encodeURIComponent(speciesName)}`
+        );
 
-  const uniqueCandidates = [...new Set(candidates.filter(Boolean))];
+        const defaultVariety =
+          (species.varieties || []).find((entry) => entry.is_default)?.pokemon;
 
-  let lastError;
+        if (defaultVariety?.url) {
+          return await getJson(defaultVariety.url);
+        }
 
-  for (const candidate of uniqueCandidates) {
-    try {
-      return await getJson(`${API}/pokemon/${encodeURIComponent(candidate)}`);
-    } catch (error) {
-      lastError = error;
+        if (defaultVariety?.name) {
+          return await getJson(
+            `${API}/pokemon/${encodeURIComponent(defaultVariety.name)}`
+          );
+        }
+      } catch {
+      }
     }
-  }
 
-  throw lastError || new Error(`Pokémon not found: ${name}`);
+    for (const candidate of [
+      `${normalized}-male`,
+      `${normalized}-female`
+    ]) {
+      try {
+        return await getJson(`${API}/pokemon/${encodeURIComponent(candidate)}`);
+      } catch {
+      }
+    }
+
+    throw directError;
+  }
 }
 
 function flattenEvolutionChain(chain, output = []) {
@@ -102,10 +116,17 @@ function flattenEvolutionChain(chain, output = []) {
 
 async function renderEvolution(species) {
   const container = $("evolutionLine");
-  const evolutionData = await getJson(species.evolution_chain.url);
-  const names = flattenEvolutionChain(evolutionData.chain);
+  if (!container) return;
 
   container.innerHTML = "";
+
+  if (!species?.evolution_chain?.url) {
+    container.innerHTML = `<span class="muted">No evolution line.</span>`;
+    return;
+  }
+
+  const evolutionData = await getJson(species.evolution_chain.url);
+  const names = flattenEvolutionChain(evolutionData.chain);
 
   names.forEach((name, index) => {
     const speciesIdMatch = evolutionData.chain; // placeholder to keep rendering simple
@@ -532,14 +553,24 @@ async function init() {
 
     renderPokemonForm(pokemon, baseSpeciesName);
 
-    await Promise.all([
+    $("loadingState").classList.add("hidden");
+    $("profile").classList.remove("hidden");
+
+    const optionalResults = await Promise.allSettled([
       renderEvolution(species),
       renderAppearances(baseSpeciesName),
       renderFormSelector(pokemon, species)
     ]);
 
-    $("loadingState").classList.add("hidden");
-    $("profile").classList.remove("hidden");
+    optionalResults.forEach((result, index) => {
+      if (result.status === "rejected") {
+        const sectionNames = ["evolution", "appearances", "forms"];
+        console.warn(
+          `Could not load optional ${sectionNames[index]} section:`,
+          result.reason
+        );
+      }
+    });
   } catch (error) {
     console.error(error);
     $("loadingState").classList.add("hidden");
@@ -548,5 +579,4 @@ async function init() {
 }
 
 init();
-
 
