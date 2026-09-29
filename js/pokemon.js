@@ -42,6 +42,58 @@ async function getJson(url) {
   return response.json();
 }
 
+async function getPokemonWithFallback(name) {
+  const normalized = String(name || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[♀]/g, "-f")
+    .replace(/[♂]/g, "-m")
+    .replace(/\s+/g, "-")
+    .replace(/[()]/g, "")
+    .replace(/--+/g, "-");
+
+  const candidates = [
+    normalized,
+    `${normalized}-male`,
+    `${normalized}-female`
+  ];
+
+  // Known species whose default Pokémon resource uses a gender suffix.
+  const defaultGenderAliases = {
+    meowstic: "meowstic-male",
+    indeedee: "indeedee-male",
+    oinkologne: "oinkologne-male",
+    basculegion: "basculegion-male"
+  };
+
+  if (defaultGenderAliases[normalized]) {
+    candidates.unshift(defaultGenderAliases[normalized]);
+  }
+
+  // Friendly aliases if a URL or data source spells the gender out.
+  if (normalized.endsWith("-male")) {
+    candidates.push(normalized.replace(/-male$/, ""));
+  }
+
+  if (normalized.endsWith("-female")) {
+    candidates.push(normalized.replace(/-female$/, ""));
+  }
+
+  const uniqueCandidates = [...new Set(candidates.filter(Boolean))];
+
+  let lastError;
+
+  for (const candidate of uniqueCandidates) {
+    try {
+      return await getJson(`${API}/pokemon/${encodeURIComponent(candidate)}`);
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError || new Error(`Pokémon not found: ${name}`);
+}
+
 function flattenEvolutionChain(chain, output = []) {
   output.push(chain.species.name);
   chain.evolves_to.forEach((child) => flattenEvolutionChain(child, output));
@@ -437,7 +489,7 @@ async function renderFormSelector(currentPokemon, species) {
         const selectedPokemon =
           formName === currentPokemon.name
             ? currentPokemon
-            : await getJson(`${API}/pokemon/${encodeURIComponent(formName)}`);
+            : await getPokemonWithFallback(formName);
 
         renderPokemonForm(selectedPokemon, baseSpeciesName);
 
@@ -459,9 +511,7 @@ async function renderFormSelector(currentPokemon, species) {
 
 async function init() {
   try {
-    const pokemon = await getJson(
-      `${API}/pokemon/${encodeURIComponent(requestedPokemon)}`
-    );
+    const pokemon = await getPokemonWithFallback(requestedPokemon);
 
     // IMPORTANT:
     // Alternate forms such as giratina-altered, raichu-alola, etc. do not
