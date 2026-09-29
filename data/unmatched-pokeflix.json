@@ -51,23 +51,6 @@
   },
   {
     "episode": "103",
-    "title": "Get Along, Little Pokémon",
-    "type": "episode",
-    "pokemon": [
-      "arbok",
-      "pikachu",
-      "meowth",
-      "magnemite",
-      "magneton",
-      "chansey",
-      "tauros",
-      "jolteon",
-      "togepi"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
-    "episode": "103",
     "title": "Nidothing Love!q",
     "type": "episode",
     "pokemon": [
@@ -376,27 +359,6 @@
     "searchUrl": "https://www.pokeflix.tv/search/"
   },
   {
-    "episode": "108",
-    "title": "Pokémon Water War",
-    "type": "episode",
-    "pokemon": [
-      "squirtle",
-      "wartortle",
-      "blastoise",
-      "arbok",
-      "pikachu",
-      "venonat",
-      "meowth",
-      "weezing",
-      "staryu",
-      "scyther",
-      "lapras",
-      "togepi",
-      "marill"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
     "episode": "1088",
     "title": "Dreaming of the Sun and Moon!",
     "type": "episode",
@@ -429,22 +391,6 @@
       "poipole",
       "naganadel",
       "melmetal"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
-    "episode": "109",
-    "title": "Pokémon Food Fight",
-    "type": "episode",
-    "pokemon": [
-      "squirtle",
-      "pikachu",
-      "gloom",
-      "meowth",
-      "chansey",
-      "lapras",
-      "snorlax",
-      "togepi"
     ],
     "searchUrl": "https://www.pokeflix.tv/search/"
   },
@@ -530,32 +476,6 @@
       "smoliv",
       "dolliv",
       "arboliva"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
-    "episode": "110",
-    "title": "Pokémon Double Trouble",
-    "type": "episode",
-    "pokemon": [
-      "venusaur",
-      "charizard",
-      "wartortle",
-      "arbok",
-      "pikachu",
-      "raichu",
-      "sandslash",
-      "meowth",
-      "poliwhirl",
-      "alakazam",
-      "machop",
-      "marowak",
-      "lickitung",
-      "weezing",
-      "jynx",
-      "electabuzz",
-      "lapras",
-      "togepi"
     ],
     "searchUrl": "https://www.pokeflix.tv/search/"
   },
@@ -1308,24 +1228,6 @@
   },
   {
     "episode": "122",
-    "title": "Roll On, Pokémon",
-    "type": "episode",
-    "pokemon": [
-      "arbok",
-      "pikachu",
-      "zubat",
-      "meowth",
-      "poliwag",
-      "victreebel",
-      "onix",
-      "togepi",
-      "heracross",
-      "donphan"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
-    "episode": "122",
     "title": "Roy v Friede: Wings of Fire!",
     "type": "episode",
     "pokemon": [
@@ -1444,23 +1346,6 @@
     "searchUrl": "https://www.pokeflix.tv/search/"
   },
   {
-    "episode": "123",
-    "title": "Illusion Confuison",
-    "type": "episode",
-    "pokemon": [
-      "bulbasaur",
-      "arbok",
-      "pikachu",
-      "meowth",
-      "victreebel",
-      "haunter",
-      "gengar",
-      "hoothoot",
-      "togepi"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
     "episode": "1230",
     "title": "A Squad Worth of Passion!",
     "type": "episode",
@@ -1547,40 +1432,6 @@
       "gholdengo",
       "gouging-fire",
       "terapagos"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
-    "episode": "127",
-    "title": "Little Big Horn",
-    "type": "episode",
-    "pokemon": [
-      "bulbasaur",
-      "pikachu",
-      "meowth",
-      "onix",
-      "togepi",
-      "stantler"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
-    "episode": "128",
-    "title": "Chikorita Rescue",
-    "type": "episode",
-    "pokemon": [
-      "bulbasaur",
-      "charizard",
-      "squirtle",
-      "rattata",
-      "pikachu",
-      "nidoran-f",
-      "nidoran-m",
-      "meowth",
-      "psyduck",
-      "weezing",
-      "chikorita",
-      "togepi"
     ],
     "searchUrl": "https://www.pokeflix.tv/search/"
   },
@@ -1738,39 +1589,6 @@
       "gholdengo",
       "terapagos",
       "pecharunt"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
-    "episode": "135",
-    "title": "Tanks Alot",
-    "type": "episode",
-    "pokemon": [
-      "charizard",
-      "squirtle",
-      "pidgey",
-      "pikachu",
-      "sandshrew",
-      "diglett",
-      "meowth",
-      "psyduck",
-      "poliwag",
-      "onix",
-      "staryu",
-      "sentret",
-      "togepi"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
-    "episode": "136",
-    "title": "Charizard's Burning Ambition",
-    "type": "episode",
-    "pokemon": [
-      "charizard",
-      "pikachu",
-      "meowth",
-      "togepi"
     ],
     "searchUrl": "https://www.pokeflix.tv/search/"
   },
@@ -1964,22 +1782,6 @@
       "smoliv",
       "tinkaton",
       "gholdengo"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
-    "episode": "141",
-    "title": "Mild'n Wooley",
-    "type": "episode",
-    "pokemon": [
-      "arbok",
-      "pikachu",
-      "raichu",
-      "meowth",
-      "weezing",
-      "hoothoot",
-      "togepi",
-      "mareep"
     ],
     "searchUrl": "https://www.pokeflix.tv/search/"
   },
@@ -2578,23 +2380,6 @@
     "searchUrl": "https://www.pokeflix.tv/search/"
   },
   {
-    "episode": "160",
-    "title": "A Goldenrod Oppurtunity",
-    "type": "episode",
-    "pokemon": [
-      "pikachu",
-      "nidorina",
-      "clefairy",
-      "meowth",
-      "cyndaquil",
-      "totodile",
-      "togepi",
-      "wobbuffet",
-      "miltank"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
     "episode": "177",
     "title": "Trouble With Snubbull",
     "type": "episode",
@@ -3104,23 +2889,6 @@
       "heracross",
       "delibird",
       "kecleon"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
-    "episode": "279",
-    "title": "There's No Place Like Hoenn",
-    "type": "episode",
-    "pokemon": [
-      "charizard",
-      "arbok",
-      "pikachu",
-      "meowth",
-      "weezing",
-      "wobbuffet",
-      "torchic",
-      "blaziken",
-      "vigoroth"
     ],
     "searchUrl": "https://www.pokeflix.tv/search/"
   },
@@ -5133,23 +4901,6 @@
       "gible",
       "carnivine",
       "mamoswine"
-    ],
-    "searchUrl": "https://www.pokeflix.tv/search/"
-  },
-  {
-    "episode": "637",
-    "title": "Pokémon Ranger: Heatran Rescue",
-    "type": "episode",
-    "pokemon": [
-      "pidgeot",
-      "pikachu",
-      "meowth",
-      "feraligatr",
-      "wobbuffet",
-      "piplup",
-      "buizel",
-      "buneary",
-      "heatran"
     ],
     "searchUrl": "https://www.pokeflix.tv/search/"
   },

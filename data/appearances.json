@@ -679,7 +679,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/001.shtml",
       "category": "featured",
       "description": "Our friends appear to be lost in the middle of a spooky forest.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-illusion-confusion",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/5.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -698,7 +699,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/001.shtml",
       "category": "featured",
       "description": "As our friends make there way through the park to reach the middle of the city, they see some rustling in some…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-little-big-horn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/9.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -707,7 +709,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/001.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -2285,7 +2288,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/003.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -3577,7 +3581,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/006.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -3636,7 +3641,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/006.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -3665,7 +3671,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/006.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -3674,7 +3681,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/006.shtml",
       "category": "featured",
       "description": "Our heroes, while trekking through some very mountainous terrain, comment on how all this walking is killing them.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-charizards-burning-ambitions",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/18.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -3761,7 +3769,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/006.shtml",
       "category": "featured",
       "description": "Ash and May are now headed to Petalburg City, where Ash is expecting to have his first Houen Gym match.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/06-theres-no-place-like-hoenn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/06-advanced/3.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -6316,7 +6325,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/007.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -6325,7 +6335,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/007.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have been stuck on an island for several days due to a storm making the ocean rough.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-food-fight",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/27.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -6394,7 +6405,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/007.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -6441,7 +6453,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/007.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -7290,7 +7303,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/008.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -7354,7 +7368,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/008.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -7600,7 +7615,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/009.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -12182,7 +12198,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/016.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -13760,7 +13777,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/018.shtml",
       "category": "featured",
       "description": "On their way to the next town, Ash & Co.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/13-pokemon-ranger-heatran-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/13-dp-sinnoh-league/12.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -14266,7 +14284,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/019.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -17005,7 +17024,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/024.shtml",
       "category": "featured",
       "description": "Ash, Misty and Tracey are walking through an seemingly endless desert.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-get-along-little-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/21.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -17033,7 +17053,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/024.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -17042,7 +17063,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/024.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -17071,7 +17093,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/024.shtml",
       "category": "featured",
       "description": "On their way to Violet City, Ash, Misty, Brock, and Pikachu approach a cliff where the view of the surrounding area is…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-roll-on-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/4.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -17080,7 +17103,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/024.shtml",
       "category": "featured",
       "description": "Our friends appear to be lost in the middle of a spooky forest.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-illusion-confusion",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/5.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -17169,7 +17193,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/024.shtml",
       "category": "featured",
       "description": "Our heroes have stopped in a grassy meadow for a lunch break.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-mild-n-wooly",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/23.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -17941,7 +17966,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/024.shtml",
       "category": "featured",
       "description": "Ash and May are now headed to Petalburg City, where Ash is expecting to have his first Houen Gym match.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/06-theres-no-place-like-hoenn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/06-advanced/3.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19191,7 +19217,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "Ash, Misty and Tracey are walking through an seemingly endless desert.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-get-along-little-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/21.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19258,7 +19285,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19267,7 +19295,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have been stuck on an island for several days due to a storm making the ocean rough.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-food-fight",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/27.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19276,7 +19305,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19394,7 +19424,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "On their way to Violet City, Ash, Misty, Brock, and Pikachu approach a cliff where the view of the surrounding area is…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-roll-on-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/4.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19403,7 +19434,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "Our friends appear to be lost in the middle of a spooky forest.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-illusion-confusion",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/5.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19442,7 +19474,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "As our friends make there way through the park to reach the middle of the city, they see some rustling in some…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-little-big-horn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/9.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19451,7 +19484,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19528,7 +19562,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19537,7 +19572,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "Our heroes, while trekking through some very mountainous terrain, comment on how all this walking is killing them.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-charizards-burning-ambitions",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/18.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19585,7 +19621,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "Our heroes have stopped in a grassy meadow for a lunch break.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-mild-n-wooly",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/23.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -19788,7 +19825,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "After what seemed like years of traveling, Ash, Misty, Brock, and Pikachu have finally reached Goldenrod City, the home of Goldenrod City…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/04-a-goldenrod-opportunity",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/04-johto-league/1.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -21013,7 +21051,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "Ash and May are now headed to Petalburg City, where Ash is expecting to have his first Houen Gym match.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/06-theres-no-place-like-hoenn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/06-advanced/3.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -24687,7 +24726,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/025.shtml",
       "category": "featured",
       "description": "On their way to the next town, Ash & Co.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/13-pokemon-ranger-heatran-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/13-dp-sinnoh-league/12.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -31549,7 +31589,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/026.shtml",
       "category": "featured",
       "description": "Our heroes have stopped in a grassy meadow for a lunch break.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-mild-n-wooly",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/23.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -31839,7 +31880,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/026.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -32352,7 +32394,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/027.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -32686,7 +32729,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/028.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -33154,7 +33198,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/029.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -33382,7 +33427,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/030.shtml",
       "category": "featured",
       "description": "After what seemed like years of traveling, Ash, Misty, Brock, and Pikachu have finally reached Goldenrod City, the home of Goldenrod City…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/04-a-goldenrod-opportunity",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/04-johto-league/1.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -34055,7 +34101,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/032.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -34743,7 +34790,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/035.shtml",
       "category": "featured",
       "description": "After what seemed like years of traveling, Ash, Misty, Brock, and Pikachu have finally reached Goldenrod City, the home of Goldenrod City…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/04-a-goldenrod-opportunity",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/04-johto-league/1.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -38970,7 +39018,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/041.shtml",
       "category": "featured",
       "description": "On their way to Violet City, Ash, Misty, Brock, and Pikachu approach a cliff where the view of the surrounding area is…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-roll-on-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/4.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -41196,7 +41245,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/044.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have been stuck on an island for several days due to a storm making the ocean rough.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-food-fight",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/27.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -42953,7 +43003,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/048.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -44001,7 +44052,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/050.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -45862,7 +45914,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "Ash, Misty and Tracey are walking through an seemingly endless desert.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-get-along-little-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/21.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -45929,7 +45982,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -45938,7 +45992,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have been stuck on an island for several days due to a storm making the ocean rough.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-food-fight",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/27.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -45947,7 +46002,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -46065,7 +46121,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "On their way to Violet City, Ash, Misty, Brock, and Pikachu approach a cliff where the view of the surrounding area is…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-roll-on-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/4.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -46074,7 +46131,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "Our friends appear to be lost in the middle of a spooky forest.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-illusion-confusion",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/5.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -46103,7 +46161,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "As our friends make there way through the park to reach the middle of the city, they see some rustling in some…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-little-big-horn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/9.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -46112,7 +46171,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -46189,7 +46249,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -46198,7 +46259,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "Our heroes, while trekking through some very mountainous terrain, comment on how all this walking is killing them.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-charizards-burning-ambitions",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/18.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -46246,7 +46308,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "Our heroes have stopped in a grassy meadow for a lunch break.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-mild-n-wooly",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/23.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -46449,7 +46512,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "After what seemed like years of traveling, Ash, Misty, Brock, and Pikachu have finally reached Goldenrod City, the home of Goldenrod City…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/04-a-goldenrod-opportunity",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/04-johto-league/1.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -47664,7 +47728,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "Ash and May are now headed to Petalburg City, where Ash is expecting to have his first Houen Gym match.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/06-theres-no-place-like-hoenn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/06-advanced/3.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -51258,7 +51323,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/052.shtml",
       "category": "featured",
       "description": "On their way to the next town, Ash & Co.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/13-pokemon-ranger-heatran-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/13-dp-sinnoh-league/12.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -55686,7 +55752,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/054.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -55723,7 +55790,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/054.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -60237,7 +60305,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/060.shtml",
       "category": "featured",
       "description": "On their way to Violet City, Ash, Misty, Brock, and Pikachu approach a cliff where the view of the surrounding area is…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-roll-on-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/4.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -60274,7 +60343,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/060.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -61445,7 +61515,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/061.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -62469,7 +62540,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/065.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -62860,7 +62932,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/066.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -65699,7 +65772,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/071.shtml",
       "category": "featured",
       "description": "On their way to Violet City, Ash, Misty, Brock, and Pikachu approach a cliff where the view of the surrounding area is…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-roll-on-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/4.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -65708,7 +65782,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/071.shtml",
       "category": "featured",
       "description": "Our friends appear to be lost in the middle of a spooky forest.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-illusion-confusion",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/5.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -69882,7 +69957,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/081.shtml",
       "category": "featured",
       "description": "Ash, Misty and Tracey are walking through an seemingly endless desert.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-get-along-little-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/21.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -70682,7 +70758,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/082.shtml",
       "category": "featured",
       "description": "Ash, Misty and Tracey are walking through an seemingly endless desert.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-get-along-little-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/21.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -74741,7 +74818,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/093.shtml",
       "category": "featured",
       "description": "Our friends appear to be lost in the middle of a spooky forest.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-illusion-confusion",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/5.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -75537,7 +75615,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/094.shtml",
       "category": "featured",
       "description": "Our friends appear to be lost in the middle of a spooky forest.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-illusion-confusion",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/5.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -75871,7 +75950,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/095.shtml",
       "category": "featured",
       "description": "On their way to Violet City, Ash, Misty, Brock, and Pikachu approach a cliff where the view of the surrounding area is…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-roll-on-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/4.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -75880,7 +75960,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/095.shtml",
       "category": "featured",
       "description": "As our friends make there way through the park to reach the middle of the city, they see some rustling in some…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-little-big-horn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/9.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -75899,7 +75980,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/095.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -79749,7 +79831,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/105.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -81341,7 +81424,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/108.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -82385,7 +82469,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/110.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -82394,7 +82479,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/110.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -82433,7 +82519,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/110.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -82472,7 +82559,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/110.shtml",
       "category": "featured",
       "description": "Our heroes have stopped in a grassy meadow for a lunch break.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-mild-n-wooly",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/23.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -83048,7 +83136,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/110.shtml",
       "category": "featured",
       "description": "Ash and May are now headed to Petalburg City, where Ash is expecting to have his first Houen Gym match.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/06-theres-no-place-like-hoenn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/06-advanced/3.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -84210,7 +84299,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/113.shtml",
       "category": "featured",
       "description": "Ash, Misty and Tracey are walking through an seemingly endless desert.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-get-along-little-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/21.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -84219,7 +84309,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/113.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have been stuck on an island for several days due to a storm making the ocean rough.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-food-fight",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/27.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -87825,7 +87916,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/120.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -87864,7 +87956,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/120.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -89867,7 +89960,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/123.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -90454,7 +90548,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/124.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -90722,7 +90817,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/125.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -91871,7 +91967,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/128.shtml",
       "category": "featured",
       "description": "Ash, Misty and Tracey are walking through an seemingly endless desert.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-get-along-little-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/21.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -94256,7 +94353,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/131.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -94265,7 +94363,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/131.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have been stuck on an island for several days due to a storm making the ocean rough.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-food-fight",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/27.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -94274,7 +94373,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/131.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -97480,7 +97580,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/135.shtml",
       "category": "featured",
       "description": "Ash, Misty and Tracey are walking through an seemingly endless desert.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-get-along-little-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/21.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -98982,7 +99083,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/143.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have been stuck on an island for several days due to a storm making the ocean rough.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-food-fight",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/27.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -102525,7 +102627,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/152.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -103989,7 +104092,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/155.shtml",
       "category": "featured",
       "description": "After what seemed like years of traveling, Ash, Misty, Brock, and Pikachu have finally reached Goldenrod City, the home of Goldenrod City…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/04-a-goldenrod-opportunity",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/04-johto-league/1.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -105065,7 +105169,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/158.shtml",
       "category": "featured",
       "description": "After what seemed like years of traveling, Ash, Misty, Brock, and Pikachu have finally reached Goldenrod City, the home of Goldenrod City…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/04-a-goldenrod-opportunity",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/04-johto-league/1.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -106211,7 +106316,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/160.shtml",
       "category": "featured",
       "description": "On their way to the next town, Ash & Co.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/13-pokemon-ranger-heatran-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/13-dp-sinnoh-league/12.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -106571,7 +106677,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/161.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -107275,7 +107382,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/163.shtml",
       "category": "featured",
       "description": "Our friends appear to be lost in the middle of a spooky forest.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-illusion-confusion",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/5.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -107505,7 +107613,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/163.shtml",
       "category": "featured",
       "description": "Our heroes have stopped in a grassy meadow for a lunch break.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-mild-n-wooly",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/23.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -111956,7 +112065,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "Ash, Misty and Tracey are walking through an seemingly endless desert.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-get-along-little-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/21.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -112023,7 +112133,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -112032,7 +112143,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have been stuck on an island for several days due to a storm making the ocean rough.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-food-fight",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/27.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -112041,7 +112153,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "s Ash, Misty, and Tracey are riding Lapras towards Kumquat Island, the home of the fourth Orange Crew badge.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-pokemon-double-trouble",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/28.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -112159,7 +112272,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "On their way to Violet City, Ash, Misty, Brock, and Pikachu approach a cliff where the view of the surrounding area is…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-roll-on-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/4.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -112168,7 +112282,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "Our friends appear to be lost in the middle of a spooky forest.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-illusion-confusion",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/5.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -112207,7 +112322,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "As our friends make there way through the park to reach the middle of the city, they see some rustling in some…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-little-big-horn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/9.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -112216,7 +112332,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "As our friends are walking up a hill, they see a nearby mountain covered in snow.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-chikorita-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/10.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -112293,7 +112410,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "Ash and friends are napping under a tree, but they're being watched by a Pokemon that's eating a fruit.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-tanks-a-lot",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/17.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -112302,7 +112420,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "Our heroes, while trekking through some very mountainous terrain, comment on how all this walking is killing them.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-charizards-burning-ambitions",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/18.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -112350,7 +112469,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "Our heroes have stopped in a grassy meadow for a lunch break.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-mild-n-wooly",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/23.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -112544,7 +112664,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/175.shtml",
       "category": "featured",
       "description": "After what seemed like years of traveling, Ash, Misty, Brock, and Pikachu have finally reached Goldenrod City, the home of Goldenrod City…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/04-a-goldenrod-opportunity",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/04-johto-league/1.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -114209,7 +114330,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/179.shtml",
       "category": "featured",
       "description": "Our heroes have stopped in a grassy meadow for a lunch break.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-mild-n-wooly",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/23.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -115589,7 +115711,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/183.shtml",
       "category": "featured",
       "description": "Ash, Misty, and Tracey have decided to take a break from traveling from island to island and check out the sights on…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/02-the-pokemon-water-war",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/02-orange-islands/26.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -124771,7 +124894,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/202.shtml",
       "category": "featured",
       "description": "After what seemed like years of traveling, Ash, Misty, Brock, and Pikachu have finally reached Goldenrod City, the home of Goldenrod City…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/04-a-goldenrod-opportunity",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/04-johto-league/1.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -125956,7 +126080,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/202.shtml",
       "category": "featured",
       "description": "Ash and May are now headed to Petalburg City, where Ash is expecting to have his first Houen Gym match.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/06-theres-no-place-like-hoenn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/06-advanced/3.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -129187,7 +129312,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/202.shtml",
       "category": "featured",
       "description": "On their way to the next town, Ash & Co.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/13-pokemon-ranger-heatran-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/13-dp-sinnoh-league/12.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -134464,7 +134590,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/214.shtml",
       "category": "featured",
       "description": "On their way to Violet City, Ash, Misty, Brock, and Pikachu approach a cliff where the view of the surrounding area is…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-roll-on-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/4.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -140525,7 +140652,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/232.shtml",
       "category": "featured",
       "description": "On their way to Violet City, Ash, Misty, Brock, and Pikachu approach a cliff where the view of the surrounding area is…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-roll-on-pokemon",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/4.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -140879,7 +141007,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/234.shtml",
       "category": "featured",
       "description": "As our friends make there way through the park to reach the middle of the city, they see some rustling in some…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/03-the-little-big-horn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/03-johto-journeys/9.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -142955,7 +143084,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/241.shtml",
       "category": "featured",
       "description": "After what seemed like years of traveling, Ash, Misty, Brock, and Pikachu have finally reached Goldenrod City, the home of Goldenrod City…",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/04-a-goldenrod-opportunity",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/04-johto-league/1.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -146239,7 +146369,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/255.shtml",
       "category": "featured",
       "description": "Ash and May are now headed to Petalburg City, where Ash is expecting to have his first Houen Gym match.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/06-theres-no-place-like-hoenn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/06-advanced/3.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -147359,7 +147490,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/257.shtml",
       "category": "featured",
       "description": "Ash and May are now headed to Petalburg City, where Ash is expecting to have his first Houen Gym match.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/06-theres-no-place-like-hoenn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/06-advanced/3.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -157535,7 +157667,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/288.shtml",
       "category": "featured",
       "description": "Ash and May are now headed to Petalburg City, where Ash is expecting to have his first Houen Gym match.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/06-theres-no-place-like-hoenn",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/06-advanced/3.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -185169,7 +185302,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/393.shtml",
       "category": "featured",
       "description": "On their way to the next town, Ash & Co.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/13-pokemon-ranger-heatran-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/13-dp-sinnoh-league/12.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -192533,7 +192667,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/418.shtml",
       "category": "featured",
       "description": "On their way to the next town, Ash & Co.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/13-pokemon-ranger-heatran-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/13-dp-sinnoh-league/12.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -195383,7 +195518,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/427.shtml",
       "category": "featured",
       "description": "On their way to the next town, Ash & Co.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/13-pokemon-ranger-heatran-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/13-dp-sinnoh-league/12.jpg"
     },
     {
       "series": "Pokémon Anime",
@@ -214005,7 +214141,8 @@
       "sourceUrl": "https://www.serebii.net/anime/dex/485.shtml",
       "category": "featured",
       "description": "On their way to the next town, Ash & Co.",
-      "searchUrl": "https://www.pokeflix.tv/search/"
+      "watchUrl": "https://www.pokeflix.tv/v/13-pokemon-ranger-heatran-rescue",
+      "thumbnail": "https://www.pokeflix.tv/static/thumbnails/13-dp-sinnoh-league/12.jpg"
     },
     {
       "series": "Pokémon Anime",
