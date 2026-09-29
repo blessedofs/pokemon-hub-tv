@@ -766,6 +766,53 @@ def write_search_index(data: dict[str, list[dict]], out_file: Path) -> None:
     print(f"Wrote search index: {out_file} ({len(records)} titles)")
 
 
+
+def write_unmatched_report(data: dict[str, list[dict]], out_file: Path) -> None:
+    """
+    Write a deduplicated report of every anime title that still has no direct
+    Pokéflix watch URL. This makes it easy to build manual aliases in batches.
+    """
+    merged: dict[tuple[str, str], dict] = {}
+
+    for species_key, appearances in data.items():
+        for item in appearances:
+            if item.get("watchUrl"):
+                continue
+
+            title = str(item.get("title", "")).strip()
+            if not title:
+                continue
+
+            episode = str(item.get("episode", "")).strip()
+            category = item.get("category", "featured")
+            key = (episode, title)
+
+            if key not in merged:
+                merged[key] = {
+                    "episode": episode,
+                    "title": title,
+                    "type": "movie-special" if category == "movie-special" else "episode",
+                    "pokemon": [],
+                    "searchUrl": item.get("searchUrl", f"{POKEFLIX_BASE}/search/"),
+                }
+
+            if species_key not in merged[key]["pokemon"]:
+                merged[key]["pokemon"].append(species_key)
+
+            if category == "movie-special":
+                merged[key]["type"] = "movie-special"
+
+    records = sorted(
+        merged.values(),
+        key=lambda x: (x.get("type", ""), x.get("episode", ""), x.get("title", "").lower()),
+    )
+
+    out_file.write_text(
+        json.dumps(records, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(f"Wrote unmatched Pokéflix report: {out_file} ({len(records)} titles)")
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-dex", type=int, default=1025)
@@ -790,6 +837,9 @@ def main():
 
     search_file = out_path.parent / "search-index.json"
     write_search_index(data, search_file)
+
+    unmatched_file = out_path.parent / "unmatched-pokeflix.json"
+    write_unmatched_report(data, unmatched_file)
 
 
 if __name__ == "__main__":
