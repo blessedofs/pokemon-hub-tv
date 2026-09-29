@@ -283,6 +283,14 @@ function getDisplayFormName(baseName, formName) {
     return `Mega ${titleCase(baseName)}${suffix ? ` ${titleCase(suffix)}` : ""}`;
   }
 
+  if (formName.endsWith("-male")) {
+    return `${titleCase(baseName)} (Male)`;
+  }
+
+  if (formName.endsWith("-female")) {
+    return `${titleCase(baseName)} (Female)`;
+  }
+
   const regionalForms = [
     { key: "-alola", label: "Alolan" },
     { key: "-galar", label: "Galarian" },
@@ -293,11 +301,13 @@ function getDisplayFormName(baseName, formName) {
   const regional = regionalForms.find((region) => formName.includes(region.key));
 
   if (regional) {
-    const suffix = formName
+    let suffix = formName
       .replace(baseName, "")
       .replace(regional.key, "")
       .replace(/^-+/, "")
       .trim();
+
+    suffix = suffix.replace(/-breed$/, "");
 
     return `${regional.label} ${titleCase(baseName)}${suffix ? ` (${titleCase(suffix)})` : ""}`;
   }
@@ -330,13 +340,15 @@ function renderPokemonForm(pokemon, baseName) {
     .join("");
 }
 
-function getSupportedVarieties(species) {
+function getSpeciesSupportedVarieties(species) {
   const supportedMarkers = [
     "-mega",
     "-alola",
     "-galar",
     "-hisui",
-    "-paldea"
+    "-paldea",
+    "-male",
+    "-female"
   ];
 
   return (species.varieties || [])
@@ -347,13 +359,56 @@ function getSupportedVarieties(species) {
     );
 }
 
-async function renderFormSelector(basePokemon, species) {
+async function findRegionalForms(baseName) {
+  const candidates = [
+    `${baseName}-alola`,
+    `${baseName}-galar`,
+    `${baseName}-hisui`,
+    `${baseName}-paldea`
+  ];
+
+  // Paldean Tauros uses breed-specific endpoint names.
+  if (baseName === "tauros") {
+    candidates.push(
+      "tauros-paldea-combat-breed",
+      "tauros-paldea-blaze-breed",
+      "tauros-paldea-aqua-breed"
+    );
+  }
+
+  const checks = await Promise.allSettled(
+    candidates.map(async (name) => {
+      const data = await getJson(`${API}/pokemon/${encodeURIComponent(name)}`);
+      return data?.name || name;
+    })
+  );
+
+  return checks
+    .filter((result) => result.status === "fulfilled")
+    .map((result) => result.value);
+}
+
+async function renderFormSelector(currentPokemon, species) {
   const wrap = $("formSelectorWrap");
   const container = $("formSelector");
   if (!wrap || !container) return;
 
-  const alternateForms = getSupportedVarieties(species);
-  if (!alternateForms.length) {
+  const baseSpeciesName = species.name;
+
+  const defaultVariety =
+    (species.varieties || []).find((entry) => entry.is_default)?.pokemon?.name ||
+    currentPokemon.name;
+
+  const speciesForms = getSpeciesSupportedVarieties(species);
+  const probedRegionalForms = await findRegionalForms(baseSpeciesName);
+
+  const forms = [...new Set([
+    defaultVariety,
+    ...speciesForms,
+    ...probedRegionalForms
+  ])];
+
+  if (forms.length <= 1) {
     wrap.classList.add("hidden");
     container.innerHTML = "";
     return;
@@ -362,13 +417,12 @@ async function renderFormSelector(basePokemon, species) {
   wrap.classList.remove("hidden");
   container.innerHTML = "";
 
-  const forms = [basePokemon.name, ...alternateForms];
-
-  forms.forEach((formName, index) => {
+  forms.forEach((formName) => {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = `form-button${index === 0 ? " active" : ""}`;
-    button.textContent = getDisplayFormName(basePokemon.name, formName);
+    button.className =
+      `form-button${formName === currentPokemon.name ? " active" : ""}`;
+    button.textContent = getDisplayFormName(baseSpeciesName, formName);
     button.dataset.form = formName;
 
     button.addEventListener("click", async () => {
@@ -380,11 +434,12 @@ async function renderFormSelector(basePokemon, species) {
       });
 
       try {
-        const selectedPokemon = formName === basePokemon.name
-          ? basePokemon
-          : await getJson(`${API}/pokemon/${encodeURIComponent(formName)}`);
+        const selectedPokemon =
+          formName === currentPokemon.name
+            ? currentPokemon
+            : await getJson(`${API}/pokemon/${encodeURIComponent(formName)}`);
 
-        renderPokemonForm(selectedPokemon, basePokemon.name);
+        renderPokemonForm(selectedPokemon, baseSpeciesName);
 
         buttons.forEach((item) => {
           item.classList.toggle("active", item.dataset.form === formName);
@@ -404,25 +459,33 @@ async function renderFormSelector(basePokemon, species) {
 
 async function init() {
   try {
-    const [pokemon, species] = await Promise.all([
-      getJson(`${API}/pokemon/${encodeURIComponent(requestedPokemon)}`),
-      getJson(`${API}/pokemon-species/${encodeURIComponent(requestedPokemon)}`)
-    ]);
+    const pokemon = await getJson(
+      `${API}/pokemon/${encodeURIComponent(requestedPokemon)}`
+    );
 
-    const baseName = titleCase(pokemon.name);
-    document.title = `${baseName} #${pokemon.id} | Pokémon Hub`;
+    // IMPORTANT:
+    // Alternate forms such as giratina-altered, raichu-alola, etc. do not
+    // necessarily have their own pokemon-species endpoint. The Pokémon record
+    // already tells us which base species it belongs to, so use that URL.
+    const species = await getJson(pokemon.species.url);
 
-    $("dexNumber").textContent = `#${String(pokemon.id).padStart(4, "0")}`;
+    const baseSpeciesName = species.name;
+    const displayName = getDisplayFormName(baseSpeciesName, pokemon.name);
+
+    document.title = `${displayName} #${pokemon.id} | Pokémon Hub`;
+
+    $("pokemonName").textContent = displayName;
+    $("dexNumber").textContent = `#${String(species.id).padStart(4, "0")}`;
     $("generation").textContent = formatGeneration(species.generation.name);
     $("region").textContent = generationRegion[species.generation.name] || "Unknown";
     $("description").textContent = getEnglishFlavor(species);
 
-    renderPokemonForm(pokemon, pokemon.name);
-    await renderFormSelector(pokemon, species);
+    renderPokemonForm(pokemon, baseSpeciesName);
 
     await Promise.all([
       renderEvolution(species),
-      renderAppearances(pokemon.name)
+      renderAppearances(baseSpeciesName),
+      renderFormSelector(pokemon, species)
     ]);
 
     $("loadingState").classList.add("hidden");
@@ -435,4 +498,5 @@ async function init() {
 }
 
 init();
+
 
