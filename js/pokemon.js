@@ -271,6 +271,107 @@ async function renderAppearances(pokemonName) {
   }
 }
 
+function getDisplayFormName(baseName, formName) {
+  if (formName === baseName) return titleCase(baseName);
+
+  if (formName.includes("-mega")) {
+    const suffix = formName
+      .replace(`${baseName}-mega`, "")
+      .replace(/^-/, "")
+      .trim();
+
+    return `Mega ${titleCase(baseName)}${suffix ? ` ${titleCase(suffix)}` : ""}`;
+  }
+
+  return titleCase(formName);
+}
+
+function renderPokemonForm(pokemon, baseName) {
+  const displayName = getDisplayFormName(baseName, pokemon.name);
+
+  $("pokemonName").textContent = displayName;
+
+  const artwork =
+    pokemon.sprites?.other?.["official-artwork"]?.front_default ||
+    pokemon.sprites?.other?.home?.front_default ||
+    pokemon.sprites?.front_default ||
+    "";
+
+  $("pokemonArt").src = artwork;
+  $("pokemonArt").alt = `${displayName} official artwork`;
+
+  $("height").textContent = `${(pokemon.height / 10).toFixed(1)} m`;
+  $("weight").textContent = `${(pokemon.weight / 10).toFixed(1)} kg`;
+  $("abilities").textContent = pokemon.abilities
+    .map((entry) => titleCase(entry.ability.name))
+    .join(", ");
+
+  $("types").innerHTML = pokemon.types
+    .map((entry) => `<span class="type-pill">${titleCase(entry.type.name)}</span>`)
+    .join("");
+}
+
+function getMegaVarieties(species) {
+  return (species.varieties || [])
+    .map((entry) => entry.pokemon?.name)
+    .filter((name) => name && name.includes("-mega"));
+}
+
+async function renderFormSelector(basePokemon, species) {
+  const wrap = $("formSelectorWrap");
+  const container = $("formSelector");
+  if (!wrap || !container) return;
+
+  const megaForms = getMegaVarieties(species);
+  if (!megaForms.length) {
+    wrap.classList.add("hidden");
+    container.innerHTML = "";
+    return;
+  }
+
+  wrap.classList.remove("hidden");
+  container.innerHTML = "";
+
+  const forms = [basePokemon.name, ...megaForms];
+
+  forms.forEach((formName, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `form-button${index === 0 ? " active" : ""}`;
+    button.textContent = getDisplayFormName(basePokemon.name, formName);
+    button.dataset.form = formName;
+
+    button.addEventListener("click", async () => {
+      if (button.classList.contains("active")) return;
+
+      const buttons = container.querySelectorAll(".form-button");
+      buttons.forEach((item) => {
+        item.disabled = true;
+      });
+
+      try {
+        const selectedPokemon = formName === basePokemon.name
+          ? basePokemon
+          : await getJson(`${API}/pokemon/${encodeURIComponent(formName)}`);
+
+        renderPokemonForm(selectedPokemon, basePokemon.name);
+
+        buttons.forEach((item) => {
+          item.classList.toggle("active", item.dataset.form === formName);
+        });
+      } catch (error) {
+        console.error("Could not load Pokémon form:", formName, error);
+      } finally {
+        buttons.forEach((item) => {
+          item.disabled = false;
+        });
+      }
+    });
+
+    container.append(button);
+  });
+}
+
 async function init() {
   try {
     const [pokemon, species] = await Promise.all([
@@ -278,29 +379,16 @@ async function init() {
       getJson(`${API}/pokemon-species/${encodeURIComponent(requestedPokemon)}`)
     ]);
 
-    const name = titleCase(pokemon.name);
-    document.title = `${name} #${pokemon.id} | Pokémon Hub`;
+    const baseName = titleCase(pokemon.name);
+    document.title = `${baseName} #${pokemon.id} | Pokémon Hub`;
 
-    $("pokemonName").textContent = name;
     $("dexNumber").textContent = `#${String(pokemon.id).padStart(4, "0")}`;
     $("generation").textContent = formatGeneration(species.generation.name);
     $("region").textContent = generationRegion[species.generation.name] || "Unknown";
     $("description").textContent = getEnglishFlavor(species);
 
-    $("pokemonArt").src =
-      pokemon.sprites.other["official-artwork"].front_default ||
-      pokemon.sprites.front_default;
-    $("pokemonArt").alt = `${name} official artwork`;
-
-    $("height").textContent = `${(pokemon.height / 10).toFixed(1)} m`;
-    $("weight").textContent = `${(pokemon.weight / 10).toFixed(1)} kg`;
-    $("abilities").textContent = pokemon.abilities
-      .map((entry) => titleCase(entry.ability.name))
-      .join(", ");
-
-    $("types").innerHTML = pokemon.types
-      .map((entry) => `<span class="type-pill">${titleCase(entry.type.name)}</span>`)
-      .join("");
+    renderPokemonForm(pokemon, pokemon.name);
+    await renderFormSelector(pokemon, species);
 
     await Promise.all([
       renderEvolution(species),
@@ -317,4 +405,3 @@ async function init() {
 }
 
 init();
-
