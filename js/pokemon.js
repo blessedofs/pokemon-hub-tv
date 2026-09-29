@@ -283,6 +283,25 @@ function getDisplayFormName(baseName, formName) {
     return `Mega ${titleCase(baseName)}${suffix ? ` ${titleCase(suffix)}` : ""}`;
   }
 
+  const regionalForms = [
+    { key: "-alola", label: "Alolan" },
+    { key: "-galar", label: "Galarian" },
+    { key: "-hisui", label: "Hisuian" },
+    { key: "-paldea", label: "Paldean" }
+  ];
+
+  const regional = regionalForms.find((region) => formName.includes(region.key));
+
+  if (regional) {
+    const suffix = formName
+      .replace(baseName, "")
+      .replace(regional.key, "")
+      .replace(/^-+/, "")
+      .trim();
+
+    return `${regional.label} ${titleCase(baseName)}${suffix ? ` (${titleCase(suffix)})` : ""}`;
+  }
+
   return titleCase(formName);
 }
 
@@ -311,10 +330,21 @@ function renderPokemonForm(pokemon, baseName) {
     .join("");
 }
 
-function getMegaVarieties(species) {
+function getSupportedVarieties(species) {
+  const supportedMarkers = [
+    "-mega",
+    "-alola",
+    "-galar",
+    "-hisui",
+    "-paldea"
+  ];
+
   return (species.varieties || [])
     .map((entry) => entry.pokemon?.name)
-    .filter((name) => name && name.includes("-mega"));
+    .filter((name) =>
+      name &&
+      supportedMarkers.some((marker) => name.includes(marker))
+    );
 }
 
 async function renderFormSelector(basePokemon, species) {
@@ -322,8 +352,8 @@ async function renderFormSelector(basePokemon, species) {
   const container = $("formSelector");
   if (!wrap || !container) return;
 
-  const megaForms = getMegaVarieties(species);
-  if (!megaForms.length) {
+  const alternateForms = getSupportedVarieties(species);
+  if (!alternateForms.length) {
     wrap.classList.add("hidden");
     container.innerHTML = "";
     return;
@@ -332,7 +362,7 @@ async function renderFormSelector(basePokemon, species) {
   wrap.classList.remove("hidden");
   container.innerHTML = "";
 
-  const forms = [basePokemon.name, ...megaForms];
+  const forms = [basePokemon.name, ...alternateForms];
 
   forms.forEach((formName, index) => {
     const button = document.createElement("button");
@@ -405,3 +435,4 @@ async function init() {
 }
 
 init();
+
